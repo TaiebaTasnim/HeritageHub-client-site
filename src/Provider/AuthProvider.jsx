@@ -21,14 +21,14 @@ const AuthProvider = ({ children }) => {
       useEffect(() => {
             const unSubscribe = onAuthStateChanged(auth, currentUser => {
                        setUser(currentUser)
-                        console.log('status captured', currentUser?.email)
+                        //console.log('status captured', currentUser?.email)
                         if(currentUser?.email)
                         {
                               const user={email : currentUser.email}
 
                               axios.post('https://heritage-hub-server-site.vercel.app/jwt',user,{withCredentials:true})
                               .then(res=>{
-                                    console.log('login',res.data)
+                                    //console.log('login',res.data)
                                     setLoading(false)
 
                               })
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
                        {
                         axios.post('https://heritage-hub-server-site.vercel.app/logout',{},{withCredentials:true})
                         .then(res=>{
-                              console.log('logout',res.data)
+                              //console.log('logout',res.data)
                               setLoading(false)
                         })
                         

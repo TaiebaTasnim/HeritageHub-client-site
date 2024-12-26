@@ -10,7 +10,7 @@ import Lottie from "lottie-react";
 const MyArtifacts = () => {
       //const loadedArtifacts=useLoaderData()
       const {email}=useParams()
-      console.log(email)
+      //console.log(email)
       const [myArtifact,setMyArtifact]=useState([])
       const [loading,setLoading]=useState(true)
       const navigate=useNavigate()

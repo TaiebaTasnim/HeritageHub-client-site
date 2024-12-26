@@ -95,7 +95,7 @@ const AllArtifacts = () => {
                 {/* Button */}
                 <button
                   onClick={() =>
-                    navigate(`/artifactDetail/${artifact._id}/${user.email}`)
+                    navigate(`/artifactDetail/${artifact._id}/${user?.email}`)
                   }
                   className="py-2 px-6 border-2 border-[#00FFFF] text-[#00FFFF] font-semibold rounded-full inline-flex items-center justify-center gap-2 transition-all duration-300 group-hover:bg-[#000029] hover:text-[white] hover:border-white"
                 >
