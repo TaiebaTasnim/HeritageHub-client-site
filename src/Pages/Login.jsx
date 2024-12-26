@@ -8,6 +8,7 @@ import { auth } from "../Firebase/firebase.config";
 import { FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import Lottie from "lottie-react";
+
 import login from "../assets/Lottie/login.json"
 import Swal from "sweetalert2";
 
@@ -21,6 +22,13 @@ const Login = () => {
   const handleSignup=()=>{
     signInWithPopup(auth,provider)
         .then((result)=>{
+          Swal.fire({
+            title: "Login Successful!",
+            text: `Welcome! You successfully loged in.`,
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+         
           navigate('/')
           
           //console.log(result)
@@ -76,7 +84,7 @@ const Login = () => {
       return (
        
             <div
-            className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
+            className="min-h-screen bg-cover bg-center container mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center relative my-10"
             // style={{
             //   backgroundImage: "url('https://i.ibb.co.com/bFGz7FV/visa-9.jpg')", // Replace with your image URL
             // }}
@@ -84,13 +92,11 @@ const Login = () => {
              <Helmet>
               <title>Login</title>
              </Helmet>
-             <div>
-        <Lottie animationData={login}></Lottie>
-      </div>
+            
         
             {/* Animated Form */}
             <div
-               className="z-10 w-[90%] max-w-md px-8 py-10 mt-0 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029] " 
+               className=" w-[90%] max-w-md px-8 py-10 mt-0 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029] " 
               >
                 <h1 className="text-3xl font-bold text-center text-[#000029] mb-6">
                   Login
@@ -158,6 +164,9 @@ const Login = () => {
         
                 </div>
               </div>
+              <div className="md:w-[450px] ">
+        <Lottie animationData={login}></Lottie>
+      </div>
           </div>
       );
 };

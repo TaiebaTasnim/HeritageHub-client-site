@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 
 
+
 const Root = () => {
       useEffect(() => {
             AOS.init({ duration: 800 }); // Initialize AOS with animation duration

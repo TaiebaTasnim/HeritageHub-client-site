@@ -143,7 +143,7 @@ const handlesignout = () => {
     }
       return (
         <div className="bg-[#000029] text-white shadow-md">
-        <div className="container mx-auto w-[90%] navbar px-4 py-3">
+        <div className="container mx-auto md:w-[90%] navbar px-4 py-3">
           {/* Navbar Start */}
           <div className="navbar-start">
             <div className="dropdown">
@@ -165,14 +165,14 @@ const handlesignout = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-[#000029] rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-[#000029] rounded-box z-[1] mt-3 w-48 p-2  shadow"
               >
                 {links}
               </ul>
             </div>
             <a
               href="/"
-              className="text-white text-2xl font-style font-bold tracking-wide hover:text-[#00FFFF] transition duration-300"
+              className="text-white text-[16px] md:text-2xl font-style font-bold tracking-wide hover:text-[#00FFFF] transition duration-300"
             >
               Heritage<span className="text-[#00FFFF]">Hub</span>
             </a>
@@ -252,10 +252,10 @@ const handlesignout = () => {
                 
               </div>
             ) : (
-              <div className="flex gap-2">
+              <div className="flex gap-1 md:gap-2">
                 <Link
                   to="/login"
-                  className="py-2 px-4 bg-[#00FFFF] text-[#000029] rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group"
+                  className="py-2 px-2 bg-[#00FFFF] text-[#000029] rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#00FFFF] to-[#000029] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
                   <span className="relative group-hover:text-white transition duration-500 ease-in-out">
@@ -264,7 +264,7 @@ const handlesignout = () => {
                 </Link>
                 <Link
                   to="/register"
-                  className="py-2 px-4 bg-[#00FFFF] text-[#000029] rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group"
+                  className="py-2 px-2 bg-[#00FFFF] text-[#000029] rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-[#00FFFF] to-[#000029] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
                   <span className="relative group-hover:text-white transition duration-500 ease-in-out">

@@ -8,6 +8,7 @@ import AuthProvider from './Provider/AuthProvider.jsx'
 import { HelmetProvider } from 'react-helmet-async';
 import "aos/dist/aos.css"
 
+
 import "react-tooltip/dist/react-tooltip.css";
 
 createRoot(document.getElementById('root')).render(

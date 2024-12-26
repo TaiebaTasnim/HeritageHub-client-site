@@ -24,6 +24,12 @@ const Register = () => {
       const handleSignup=()=>{
             signInWithPopup(auth,provider)
             .then((result)=>{
+              Swal.fire({
+                title: "Registration Successful!",
+                text: `Welcome,Your account has been created successfully.`,
+                icon: "success",
+                confirmButtonText: "OK",
+              });
               navigate('/')
               
               //console.log(result)
@@ -88,7 +94,7 @@ const Register = () => {
             }
       return (
             <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center gap-4 relative"
+      className="min-h-screen bg-cover bg-center flex flex-col lg:flex-row items-center justify-center gap-4 relative"
       // style={{
       //   backgroundImage: "url('https://i.ibb.co.com/bFGz7FV/visa-9.jpg')", 
       // }}
@@ -98,12 +104,10 @@ const Register = () => {
                    </Helmet>
      
       {/* <div className="absolute inset-0 bg-black bg-opacity-70"></div> */}
-      <div>
-        <Lottie animationData={register}></Lottie>
-      </div>
+      
       
       <div
-        className="z-10 w-[90%] max-w-md my-10 px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029]"
+        className="container mx-auto w-[90%] my-10 px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029]"
       //   data-aos="fade-up"
       >
         <h1
@@ -206,6 +210,9 @@ const Register = () => {
         <button className=""> Register with Google</button>
 
         </div> 
+      </div>
+      <div className="md:w-[450px]">
+        <Lottie animationData={register}></Lottie>
       </div>
     </div>
       );
