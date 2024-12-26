@@ -94,7 +94,7 @@ const Register = () => {
             }
       return (
             <div
-      className="min-h-screen bg-cover bg-center flex flex-col lg:flex-row items-center justify-center gap-4 relative"
+      className="container my-10 mx-auto w-[90%] min-h-screen bg-cover bg-center flex flex-col lg:flex-row items-center justify-center gap-4 relative"
       // style={{
       //   backgroundImage: "url('https://i.ibb.co.com/bFGz7FV/visa-9.jpg')", 
       // }}
@@ -107,7 +107,7 @@ const Register = () => {
       
       
       <div
-        className="container mx-auto w-[90%] my-10 px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029]"
+        className="md:w-[50%]  px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029]"
       //   data-aos="fade-up"
       >
         <h1
@@ -211,8 +211,8 @@ const Register = () => {
 
         </div> 
       </div>
-      <div className="md:w-[450px]">
-        <Lottie animationData={register}></Lottie>
+      <div className="md:w-[450px] w-[300px]">
+        <Lottie animationData={register} ></Lottie>
       </div>
     </div>
       );
