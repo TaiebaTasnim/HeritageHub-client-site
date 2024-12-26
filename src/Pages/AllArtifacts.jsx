@@ -23,8 +23,8 @@ const AllArtifacts = () => {
         .then(res=>res.json())
         .then(data=>{
           console.log(data)
-          const filteredArtifacts = data.filter((artifact) => artifact?.artifacts?.addedByEmail === user.email); // Ensure filtering by user email
-          setAllArtifact(filteredArtifacts);
+          // const filteredArtifacts = data.filter((artifact) => artifact?.artifacts?.addedByEmail === user?.email); // Ensure filtering by user email
+          setAllArtifact(data);
         })
       }
       
