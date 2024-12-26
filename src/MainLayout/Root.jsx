@@ -12,7 +12,7 @@ const Root = () => {
       }, []);
       return (
 
-            <div className="font-display border-2 border-red-600">
+            <div className="font-display ">
                   <div className="bg-[#000029]">
                   <Header></Header>
 
