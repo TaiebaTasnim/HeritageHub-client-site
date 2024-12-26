@@ -106,8 +106,8 @@ const AllArtifacts = () => {
           ))  
         ):(
           
-            <div >
-             <p className=" text-center text-gray-300 text-2xl mt-10">No applications found for your search.</p>
+            <div className="col-span-full" >
+             <p className=" text-center text-[#000029] text-2xl mt-10">No artifacts found for your search.</p>
 
           </div>
           

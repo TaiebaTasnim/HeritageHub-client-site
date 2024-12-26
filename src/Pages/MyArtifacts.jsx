@@ -80,12 +80,12 @@ const MyArtifacts = () => {
     <h2 className="text-3xl font-bold text-center mb-8 text-[#000029]">
       My Artifacts
     </h2>
-                   <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                   <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       { myArtifact.length>0?(
             myArtifact.map((artifact,index)=>(
-              <div  key={index} className="">
-                   <div
+              
+                   <div key={index}
            
             className="relative bg-[#000029] p-6 rounded-lg shadow-lg overflow-hidden flex flex-col justify-between"
             data-aos="zoom-in"
@@ -152,14 +152,14 @@ const MyArtifacts = () => {
 
             </div>
                   
-              </div>
+              
               
                    
          
             ))
           ):(
             
-              <div >
+              <div className="col-span-full">
                <p className=" text-center text-[#000029] text-2xl mt-10">No artifacts found in your collection. Start exploring and add artifacts to your list!</p>
 
             </div>

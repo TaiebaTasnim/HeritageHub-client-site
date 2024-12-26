@@ -114,61 +114,7 @@ const LikedArtifact = () => {
     </div>
   </div>
 </div>
-//             <div>
-//                   <Helmet>
-//                         <title>My LikedArtifacts</title>
-//                   </Helmet>
-//                   <div  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-//     >
-//       { likes.length>0?(
-//             likes.map((like,index)=>(
-//               <div className="">
-//                  <div
-//         key={index}
-//         className="relative bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border-2 border-[#e20934]"
-       
-//       >
-//         {/* Visa Image */}
-//         <figure className="relative h-48 overflow-hidden p-2">
-//           <img
-//             src={like.artifacts.artifactImage}
-//             alt='image'
-//             className="w-full h-full object-cover rounded-lg"
-//           />
-//           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
-//           <h2 className="absolute bottom-5 left-5 text-white text-2xl font-bold">
-//             {like.artifacts.artifactName}
-//           </h2>
-//         </figure>
 
-//         {/* Application Info */}
-//         <div className="p-4">
-//           <h3 className="text-[#e20934] text-lg font-semibold mb-2">
-//             Artifact Type: {like.artifacts.artifactType}
-//           </h3>
-          
-//         </div>
-//                  </div>
-//               </div>
-               
-//             ))
-//           ):(
-            
-//               <div >
-//                <p className=" text-center text-gray-300 text-2xl mt-10">No applications found for your search.</p>
-
-//             </div>
-            
-            
-
-           
-//           )
-          
-//           }
-      
-//   </div>
-                  
-//             </div>
       );
 };
 
