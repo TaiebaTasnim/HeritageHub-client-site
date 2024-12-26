@@ -29,6 +29,7 @@ You can explore the live site here: [HeritageHub Live]
 - `cors`: Middleware for handling cross-origin requests on the server.
 - `dotenv`: For environment variable management.
 - `mongoose`: For MongoDB object data modeling (ODM).
+- `react tooltip`:For hovering perpose use it.
 
 
 
