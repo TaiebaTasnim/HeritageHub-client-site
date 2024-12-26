@@ -8,8 +8,7 @@ HeritageHub was created to preserve and share the stories of historical artifact
 
 ## Live URL
 
-You can explore the live site here: [HeritageHub Live] <https://heritagehub-68e63.firebaseapp.com/>
-
+You can explore the live site here: [HeritageHub Live] <https://heritagehub-68e63.web.app>
 ## Key Features
 
 - **Artifact Discovery**: Explore a wide range of historical artifacts with detailed information.
