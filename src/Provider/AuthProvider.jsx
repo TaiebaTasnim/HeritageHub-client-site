@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
                         {
                               const user={email : currentUser.email}
 
-                              axios.post('http://localhost:4000/jwt',user,{withCredentials:true})
+                              axios.post('https://heritage-hub-server-site.vercel.app/jwt',user,{withCredentials:true})
                               .then(res=>{
                                     console.log('login',res.data)
                                     setLoading(false)
@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
                         }
                        else
                        {
-                        axios.post('http://localhost:4000/logout',{},{withCredentials:true})
+                        axios.post('https://heritage-hub-server-site.vercel.app/logout',{},{withCredentials:true})
                         .then(res=>{
                               console.log('logout',res.data)
                               setLoading(false)

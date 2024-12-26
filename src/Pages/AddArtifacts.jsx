@@ -36,7 +36,7 @@ const AddArtifacts = () => {
             };
             console.log(newArtifact)
 
-            axiosSecure.post("/artifacts", {
+            axiosSecure.post("/artifacts",newArtifact, {
                   headers: {
                         "Content-Type": "application/json",
                   },
@@ -72,7 +72,7 @@ const AddArtifacts = () => {
                   });
 
 
-            //     fetch("http://localhost:4000/artifacts", {
+            //     fetch("https://heritage-hub-server-site.vercel.app/artifacts", {
             //       method: "POST",
             //       headers: {
             //         "Content-Type": "application/json",

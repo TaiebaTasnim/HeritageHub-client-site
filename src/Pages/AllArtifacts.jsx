@@ -19,7 +19,7 @@ const AllArtifacts = () => {
 
       const handleSearch=()=>{
         console.log(search)
-        fetch(`http://localhost:4000/artifact2?searchArtifact=${search}`)
+        fetch(`https://heritage-hub-server-site.vercel.app/artifact2?searchArtifact=${search}`)
         .then(res=>res.json())
         .then(data=>{
           console.log(data)
@@ -69,7 +69,7 @@ const AllArtifacts = () => {
                 <img
                   src={artifact?.artifacts?.artifactImage}
                   alt={artifact?.artifacts?.artifactName}
-                  className="w-full h-48 object-cover rounded-lg transition-all duration-300 group-hover:scale-110"
+                  className="w-full h-48 object-cover rounded-lg border-2 border-white transition-all duration-300 group-hover:scale-110"
                 />
               </div>
 

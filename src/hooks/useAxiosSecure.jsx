@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const axiosInstance=axios.create({
-      baseURL:"http://localhost:4000",
+      baseURL:"https://heritage-hub-server-site.vercel.app",
       withCredentials:true
 })
 

@@ -29,7 +29,7 @@ const ArtifactDetails = () => {
       },[email,id])  
       useEffect(()=>{
             
-            axios.get(`http://localhost:4000/artifacts1/${id}/${email}`,{withCredentials:true})
+            axiosSecure.get(`/artifacts1/${id}/${email}`)
             .then(res=>{
                   console.log(res.data)
                   setArtifact(res.data)
@@ -37,30 +37,96 @@ const ArtifactDetails = () => {
             }
                    )
       },[email,id])
-     
 
       const handleLike = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/like-artifact/${artifact?._id}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ userEmail  })
-                });
-                const data = await response.json();
-                if (response.ok) {
-                  setArtifact((prevArtifact) => ({
-                        ...prevArtifact,
-                        likeCount: prevArtifact.likeCount + 1, // Increment UI immediately
-                    }));
-                  //   setArtifact({ ...artifact });
-                  //    setLikecount((prevCount) => prevCount + 1);
-                } else {
-                    alert(data.message);
+              const response = await fetch(
+                `https://heritage-hub-server-site.vercel.app/like-artifact/${artifact?._id}`,
+                {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ userEmail }),
                 }
+              );
+              
+              
+          
+              const data = await response.json();
+          
+              if (response.ok) {
+                setArtifact((prevArtifact) => ({
+                  ...prevArtifact,
+                  likeCount: data.isLiked
+                    ? prevArtifact.likeCount + 1
+                    : prevArtifact.likeCount - 1,
+                  likedBy: data.isLiked
+                    ? [...prevArtifact.likedBy, userEmail] // Add userEmail if liked
+                    : prevArtifact.likedBy.filter((email) => email !== userEmail), // Remove userEmail if unliked
+                }));
+              } else {
+                alert(data.message || "Something went wrong");
+              }
             } catch (error) {
-                alert('Error liking artifact');
+              console.error(error);
+              alert("Error liking/unliking artifact");
             }
-        };
+          };
+          
+
+      // const handleLike = async () => {
+      //       try {
+      //         const response = await fetch(
+      //           `https://heritage-hub-server-site.vercel.app/like-artifact/${artifact?._id}`,
+      //           {
+      //             method: "POST",
+      //             headers: { "Content-Type": "application/json" },
+      //             body: JSON.stringify({ userEmail }),
+      //           }
+      //         );
+          
+      //         const data = await response.json();
+          
+      //         if (response.ok) {
+                
+      //           setArtifact((prevArtifact) => ({
+      //             ...prevArtifact,
+      //             likeCount: data.isLiked ? prevArtifact.likeCount + 1 : prevArtifact.likeCount - 1,
+      //           }));
+      //         } else {
+                
+      //           alert(data.message || "Something went wrong");
+      //         }
+      //       } catch (error) {
+      //         console.error(error);
+      //         alert("Error liking/unliking artifact");
+      //       }
+      //     };
+          
+          
+     
+
+      // const handleLike = async () => {
+      //       try {
+      //           const response = await fetch(`https://heritage-hub-server-site.vercel.app/like-artifact/${artifact?._id}`, {
+      //               method: 'POST',
+      //               headers: { 'Content-Type': 'application/json' },
+      //               body: JSON.stringify({ userEmail  })
+      //           });
+      //           const data = await response.json();
+      //           if (response.ok) {
+      //             setArtifact((prevArtifact) => ({
+      //                   ...prevArtifact,
+      //                   likeCount: prevArtifact.likeCount + 1, // Increment UI immediately
+      //               }));
+      //             //   setArtifact({ ...artifact });
+      //             //    setLikecount((prevCount) => prevCount + 1);
+      //           } else {
+      //               alert(data.message);
+      //           }
+      //       } catch (error) {
+      //           alert('Error liking artifact');
+      //       }
+      //   };
       return (
             <div>
             {/* Helmet for dynamic title */}
@@ -163,8 +229,26 @@ const ArtifactDetails = () => {
                   </div>
                 </div>
       
-                {/* Like Section */}
-                <div
+                {/* Like Dislike Section */}
+                <div className="mt-6 flex items-center justify-center gap-6">
+  <button
+    onClick={handleLike}
+    className={`py-3 px-6 rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center ${
+      artifact?.likedBy?.includes(userEmail)
+        ? "bg-[#00FFFF] text-[#000029]" 
+        : "bg-[#000029] text-white" 
+    }`}
+  >
+    
+      {artifact?.likedBy?.includes(userEmail) ? "Unlike" : "Like"}
+    
+  </button>
+  <span className="text-lg font-semibold text-gray-800">
+    Likes: {artifact?.likeCount}
+  </span>
+</div>
+
+                {/* <div
                   className="mt-6 flex items-center justify-center gap-6"
                   
                 >
@@ -179,7 +263,7 @@ const ArtifactDetails = () => {
                   <span className="text-lg font-semibold text-gray-800">
                     Likes: {artifact?.likeCount}
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

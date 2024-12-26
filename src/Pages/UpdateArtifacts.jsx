@@ -29,7 +29,7 @@ const UpdateArtifacts = () => {
       // Fetch artifact data on load
       useEffect(() => {
             setLoading(true)
-      //     fetch(`http://localhost:4000/myArtifact/${id}`)
+      //     fetch(`https://heritage-hub-server-site.vercel.app/myArtifact/${id}`)
       //         .then((response) => response.json())
       //         .then((data) => {
       //             if (data.artifacts) {
@@ -81,7 +81,7 @@ const UpdateArtifacts = () => {
       const handleSubmit = (e) => {
           e.preventDefault();
   
-          fetch(`http://localhost:4000/myArtifact/${id}`, {
+          fetch(`https://heritage-hub-server-site.vercel.app/myArtifact/${id}`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(formData),

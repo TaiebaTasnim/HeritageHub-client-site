@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet-async";
 import {  useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
-
+import loadingSpinner from '../assets/Lottie/loading.json'
+import Lottie from "lottie-react";
 
 const MyArtifacts = () => {
       //const loadedArtifacts=useLoaderData()
@@ -27,7 +28,7 @@ const MyArtifacts = () => {
       },[email])
 
       if (loading) {
-            return  <div className="flex min-h-screen justify-center items-center"><span className="loading loading-bars loading-lg text-[#e20934]"></span></div>
+            return  <div className="flex justify-center items-center min-h-screen text-[#000029]"><Lottie animationData={loadingSpinner}></Lottie></div>
         }
 
       const handleDelete = (id) => {
@@ -44,7 +45,7 @@ const MyArtifacts = () => {
                   .then((result) => {
                         if (result.isConfirmed) {
 
-                              fetch(`http://localhost:4000/myArtifact/${id}`, {
+                              fetch(`https://heritage-hub-server-site.vercel.app/myArtifact/${id}`, {
                                     method: "Delete",
                               })
                                     .then(res => res.json())

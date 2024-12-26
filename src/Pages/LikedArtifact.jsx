@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import Lottie from "lottie-react";
+import loadingSpinner from '../assets/Lottie/loading.json'
+
 
 
 const LikedArtifact = () => {
@@ -15,7 +18,7 @@ const LikedArtifact = () => {
 
       useEffect(()=>{
             setLoading(true)
-            // fetch(`http://localhost:4000/liked-artifacts/${user.email}`)
+            // fetch(`https://heritage-hub-server-site.vercel.app/liked-artifacts/${user.email}`)
             // .then(res=>res.json())
             // .then(data=>{
             //       //console.log(data)
@@ -31,7 +34,7 @@ const LikedArtifact = () => {
                    )
       },[email])
       if (loading) {
-            return  <div className="flex min-h-screen justify-center items-center"><span className="loading loading-bars loading-lg text-[#e20934]"></span></div>
+            return  <div className="flex justify-center items-center min-h-screen text-[#000029]"><Lottie animationData={loadingSpinner}></Lottie></div>
         }
       return (
             <div>

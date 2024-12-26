@@ -24,7 +24,7 @@ import UpdateArtifacts from "../Pages/UpdateArtifacts";
             {
                   path:"/",
                   element:<Home></Home>,
-                  loader:()=>fetch("http://localhost:4000/artifacts")
+                  loader:()=>fetch("https://heritage-hub-server-site.vercel.app/artifacts")
             },
             {
                   path:"/login",
@@ -45,14 +45,14 @@ import UpdateArtifacts from "../Pages/UpdateArtifacts";
                   element:<PrivateRoute>
                         <ArtifactDetails></ArtifactDetails>
                   </PrivateRoute>,
-                  //loader:({params})=>fetch(`http://localhost:4000/artifacts1/${params.id}/email`)
+                  //loader:({params})=>fetch(`https://heritage-hub-server-site.vercel.app/artifacts1/${params.id}/email`)
             },
             {
                   path:"/artifactDetail/:id/:email",
                   element:<PrivateRoute>
                         <ArtifactDetails></ArtifactDetails>
                   </PrivateRoute>,
-                  //loader:({params})=>fetch(`http://localhost:4000/artifacts1/${params.id}/email`)
+                  //loader:({params})=>fetch(`https://heritage-hub-server-site.vercel.app/artifacts1/${params.id}/email`)
             },
             {
                   path:"/liked/:email",
@@ -66,19 +66,19 @@ import UpdateArtifacts from "../Pages/UpdateArtifacts";
                   element:<PrivateRoute>
                         <MyArtifacts></MyArtifacts>
                   </PrivateRoute>,
-                  //loader:({params})=>fetch(`http://localhost:4000/myArtifacts/${params.email}`)
+                  //loader:({params})=>fetch(`https://heritage-hub-server-site.vercel.app/myArtifacts/${params.email}`)
             },
             {
                   path:"/artifactUpdate/:id",
                   element:<PrivateRoute>
                         <UpdateArtifacts></UpdateArtifacts>
                   </PrivateRoute>,
-                  //loader:({params})=>fetch(`http://localhost:4000/artifactUpdate/${params.id}`)
+                  //loader:({params})=>fetch(`https://heritage-hub-server-site.vercel.app/artifactUpdate/${params.id}`)
             },
             {
                   path:"/allArtifact",
                   element:<AllArtifacts></AllArtifacts>,
-                  loader:()=>fetch("http://localhost:4000/artifacts1")
+                  loader:()=>fetch("https://heritage-hub-server-site.vercel.app/artifacts1")
                        
             },
         ]
