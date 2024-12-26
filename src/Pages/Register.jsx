@@ -10,6 +10,7 @@ import { auth } from "../Firebase/firebase.config";
 import { Helmet } from "react-helmet-async";
 import Lottie from "lottie-react";
 import register from "../assets/Lottie/register.json"
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -56,25 +57,7 @@ const Register = () => {
 
                   
                   //console.log(result),
-                  setSuccess(true)
-                  e.target.reset(),
-                  navigate('/')
-                  // const newUser={name,email,photo}
-                  // //set newUser to DB
-                  // fetch('https://visatrek-server-site.vercel.app/users',{
-                  //       method:'Post',
-                  //       headers:{
-                  //             'content-type':'application/json'
-                  //       },
-                  //       body:JSON.stringify(newUser)
-                  // })
-                  // .then(res => res.json())
-                  // .then(data =>{
-                  //       //console.log('created newUser',data)
-
-                  // })
-                  
-                  //navigate('/login')
+                  setSuccess(true),
                   profileUpdate({ displayName:name, photoURL:photo})
                   .then(()=>{
                     const updatedUser = {
@@ -83,6 +66,14 @@ const Register = () => {
                       photoURL: photo,
                     };
                     setUser(updatedUser); 
+                    Swal.fire({
+                      title: "Registration Successful!",
+                      text: `Welcome,Your account has been created successfully.`,
+                      icon: "success",
+                      confirmButtonText: "OK",
+                    });
+                    e.target.reset(),
+                    navigate('/')
                   } )
                   .catch(error=>{
                         setErrorMsg(error.message)

@@ -9,6 +9,7 @@ import { FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import Lottie from "lottie-react";
 import login from "../assets/Lottie/login.json"
+import Swal from "sweetalert2";
 
 const Login = () => {
       const {signUser}=useContext(AuthContext)
@@ -54,6 +55,12 @@ const Login = () => {
       if (result.user) {
         setSuccess(true);
         setErrorMsg('');
+        Swal.fire({
+          title: "Login Successful!",
+          text: `Welcome! You successfully loged in.`,
+          icon: "success",
+          confirmButtonText: "OK",
+        });
         e.target.reset(); // Reset form
         navigate('/'); // Redirect to the home page
       }
