@@ -3,11 +3,11 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="bg-[#000029] text-white pt-12 pb-6 px-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto w-[90%]">
         {/* Footer Content Sections */}
         <div className="grid md:grid-cols-3 gap-12 mb-12 relative">
           {/* About Us Section */}
-          <div>
+          <div className='text-center md:text-start'>
             <a
               href="/"
               className="text-white text-2xl font-style  font-bold tracking-wide hover:text-[#00FFFF] transition duration-300"
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us Section */}
-          <div>
+          <div className='text-center md:text-start'>
             <h3 className="text-[#00FFFF] text-xl sm:text-2xl font-semibold mb-4">Contact Us</h3>
             <ul>
               <li className="mb-2">
@@ -39,7 +39,7 @@ const Footer = () => {
                 <span className="text-gray-300">123 History Lane, City, England</span>
               </li>
             </ul>
-            <div className="flex  gap-6 mt-4">
+            <div className="text-center ml-8 md:ml-0 md:text-start flex  gap-6 mt-4">
               <a href="#" className="text-gray-300 hover:text-[#00FFFF]">
                 <FaFacebook size={24} />
               </a>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="bg-[#000029]  rounded-lg shadow-xl flex flex-col items-center justify-center">
+          <div className="bg-[#000029] text-center md:text-start  rounded-lg shadow-xl flex flex-col items-center justify-center">
             <h3 className="text-[#00FFFF] text-xl sm:text-3xl font-semibold mb-2">Subscribe to Our Newsletter</h3>
             <p className="text-gray-600 text-sm sm:text-base mb-4">
               Stay updated with the latest discoveries and news from HeritageHub.
