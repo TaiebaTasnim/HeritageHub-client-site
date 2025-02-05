@@ -2,7 +2,7 @@
 
 A modern web platform dedicated to showcasing cultural heritage, historical sites, and traditional arts through an interactive and immersive experience.  
 
-![HeritageHub Screenshot](https://i.ibb.co.com/tPPdK1rG/Screenshot-308.png) <!-- Replace with actual screenshot -->
+![HeritageHub Screenshot](https://i.ibb.co.com/tPPdK1rG/Screenshot-308.png) 
 
 ## 🚀 Features  
 - **Artifact Discovery**: Explore a wide range of historical artifacts with detailed information.
