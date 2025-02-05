@@ -1,9 +1,7 @@
 # HeritageHub  
 ![HeritageHub Screenshot](https://i.ibb.co.com/FkwNBc3X/Screenshot-308.png) 
 
-A modern web platform dedicated to showcasing cultural heritage, historical sites, and traditional arts through an interactive and immersive experience.  
-
-
+A modern web platform dedicated to showcasing cultural heritage, historical sites, and traditional arts through an interactive and immersive experience.It is a platform for discovering, documenting, and sharing historical artifacts. It includes artifact discovery, user contributions, interaction (like/unlike), secure authentication, and a responsive design for seamless access on all devices.  
 
 ## 🚀 Features  
 - **Artifact Discovery**: Explore a wide range of historical artifacts with detailed information.
