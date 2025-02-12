@@ -52,12 +52,16 @@ const Banner = () => {
                   <p className="text-sm md:text-lg lg:text-xl mb-6 leading-relaxed">
                     {slide.description}
                   </p>
-                  <button className="py-3 px-6 bg-[#000029] text-white rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center">
+                  <Link to='/allArtifact'>
+                  <button className="py-3 px-6 bg-[#000029] text-white rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center ">
               <span className="absolute inset-0 bg-gradient-to-r from-[#000029] to-[#00FFFF] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span className="relative group-hover:text-white transition duration-500 ease-in-out text-center">
-                Learn More
+              <span className="relative group-hover:text-white transition duration-500 ease-in-out text-center flex items-center gap-2">
+                Explore More <FaArrowRight></FaArrowRight>
               </span>
             </button>
+
+                  </Link>
+                  
                  
                 </div>
               </div>

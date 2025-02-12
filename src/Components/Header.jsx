@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -10,6 +10,7 @@ import { IoMoon, IoSunny } from "react-icons/io5";
 const Header = () => {
       const { user, signout } = useContext(AuthContext)
       const [dark,setDark]=useState(false)
+      const location = useLocation();
       const darkModehandler=()=>{
         setDark(!dark)
         document.body.classList.toggle('dark')
@@ -17,7 +18,7 @@ const Header = () => {
      
       const links = (
         <>
-        <button className="pl-6 md:hidden"  onClick={darkModehandler}>
+        <button className="pl-6 block md:hidden md:pt-2 text-2xl"  onClick={darkModehandler}>
                   {
                     dark && <IoSunny></IoSunny>
                   }
@@ -181,22 +182,26 @@ const handlesignout = () => {
               </div>
               <ul
                 tabIndex={0}
+                key={location.pathname}
                 className="menu menu-sm dropdown-content bg-[#000029] rounded-box z-[1] mt-3 w-48 p-2 space-y-4  shadow"
               >
                 {links}
               </ul>
             </div>
+            <Link to='/'>
             <a
               href="/"
-              className="text-white text-[16px] md:text-2xl font-style font-bold tracking-wide hover:text-[#00FFFF] transition duration-300"
+              className="text-white text-[16px] md:text-2xl font-style font-bold tracking-wide "
             >
               Heritage<span className="text-[#00FFFF]">Hub</span>
             </a>
+            </Link>
+            
           </div>
   
           {/* Navbar Center */}
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{links}</ul>
+            <ul  key={location.pathname} className="menu menu-horizontal px-1">{links}</ul>
           </div>
   
           {/* Navbar End */}
@@ -288,7 +293,7 @@ const handlesignout = () => {
                     Register
                   </span>
                 </Link>
-                <button className="hidden md:block" onClick={darkModehandler}>
+                <button className="hidden md:block text-2xl" onClick={darkModehandler}>
                   {
                     dark && <IoSunny></IoSunny>
                   }
