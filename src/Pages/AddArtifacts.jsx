@@ -111,49 +111,49 @@ const AddArtifacts = () => {
       };
 
       return (
-            <div className="bg-white my-10">
+            <div className="bg-white mt-10 py-14 dark:bg-black">
                   <Helmet>
                         <title>Add Artifacts</title>
                   </Helmet>
-                  <div className="container w-[90%] mx-auto border-2 border-[#000029] bg-white text-black p-8 shadow-lg rounded-md">
-                        <h2 className="text-3xl font-bold mb-6 text-center text-[#000029]">
+                  <div className="container w-[90%] mx-auto border-2 border-[#000029] bg-white dark:bg-black dark:border-white text-black dark:text-white  p-8 shadow-lg rounded-md">
+                        <h2 className="text-3xl dark:text-white font-bold mb-6 text-center text-[#000029]">
                               Add Artifact
                         </h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                               {/* Artifact Name */}
                               <div>
-                                    <label className="font-semibold mb-2 block text-[#000029]">Artifact Name</label>
+                                    <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Artifact Name</label>
                                     <input
                                           type="text"
                                           name="artifactName"
                                           value={formData.artifactName}
                                           onChange={handleChange}
-                                          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                          className="w-full border border-[#000029] dark:border-white bg-transparent px-3 py-2 rounded text-black dark:text-white "
                                           required
                                     />
                               </div>
 
                               {/* Artifact Image */}
                               <div>
-                                    <label className="font-semibold mb-2 block text-[#000029]">Artifact Image URL</label>
+                                    <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Artifact Image URL</label>
                                     <input
                                           type="text"
                                           name="artifactImage"
                                           value={formData.artifactImage}
                                           onChange={handleChange}
-                                          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                          className="w-full border dark:border-white border-[#000029] bg-transparent px-3 py-2 rounded text-black"
                                           required
                                     />
                               </div>
 
                               {/* Artifact Type */}
                               <div>
-                                    <label className="font-semibold mb-2 block text-[#000029]">Artifact Type</label>
+                                    <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Artifact Type</label>
                                     <select
                                           name="artifactType"
                                           value={formData.artifactType}
                                           onChange={handleChange}
-                                          className="w-full border border-[#000029] bg-[#000029] px-3 py-2 rounded text-white"
+                                          className="w-full border dark:border-white border-[#000029] bg-[#000029] px-3 py-2 rounded text-white"
                                     >
                                           <option disabled value="">Pick an Artifact type</option>
                                           {artifactTypes.map((type, idx) => (
@@ -166,12 +166,12 @@ const AddArtifacts = () => {
 
                               {/* Historical Context */}
                               <div>
-                                    <label className="font-semibold mb-2 block text-[#000029]">Historical Context</label>
+                                    <label className="font-semibold dark:text-white  mb-2 block text-[#000029]">Historical Context</label>
                                     <textarea
                                           name="historicalContext"
                                           value={formData.historicalContext}
                                           onChange={handleChange}
-                                          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                          className="w-full border dark:border-white border-[#000029] bg-transparent px-3 py-2 rounded dark:text-white  text-black"
                                           rows="4"
                                           required
                                     ></textarea>
@@ -181,26 +181,26 @@ const AddArtifacts = () => {
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {/* Created At */}
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Created At</label>
+                                          <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Created At</label>
                                           <input
                                                 type="text"
                                                 name="createdAt"
                                                 value={formData.createdAt}
                                                 onChange={handleChange}
-                                                className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                                className="w-full border dark:border-white border-[#000029] bg-transparent px-3 py-2 rounded dark:text-white  text-black"
                                                 required
                                           />
                                     </div>
 
                                     {/* Discovered At */}
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Discovered At</label>
+                                          <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Discovered At</label>
                                           <input
                                                 type="text"
                                                 name="discoveredAt"
                                                 value={formData.discoveredAt}
                                                 onChange={handleChange}
-                                                className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                                className="w-full border dark:border-white border-[#000029] bg-transparent px-3 py-2 rounded dark:text-white  text-black"
                                                 required
                                           />
                                     </div>
@@ -210,26 +210,26 @@ const AddArtifacts = () => {
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {/* Discovered By */}
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Discovered By</label>
+                                          <label className="font-semibold mb-2 dark:text-white  block text-[#000029]">Discovered By</label>
                                           <input
                                                 type="text"
                                                 name="discoveredBy"
                                                 value={formData.discoveredBy}
                                                 onChange={handleChange}
-                                                className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                                className="w-full border dark:border-white dark:text-white  border-[#000029] bg-transparent px-3 py-2 rounded text-black"
                                                 required
                                           />
                                     </div>
 
                                     {/* Present Location */}
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Present Location</label>
+                                          <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Present Location</label>
                                           <input
                                                 type="text"
                                                 name="presentLocation"
                                                 value={formData.presentLocation}
                                                 onChange={handleChange}
-                                                className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+                                                className="w-full border dark:border-white border-[#000029] bg-transparent px-3 py-2 rounded dark:text-white  text-black"
                                                 required
                                           />
                                     </div>
@@ -238,20 +238,20 @@ const AddArtifacts = () => {
                               {/* Read-Only Logged-In User Info */}
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Added By</label>
+                                          <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Added By</label>
                                           <input
                                                 type="text"
                                                 value={user?.displayName || "Anonymous"}
-                                                className="w-full border border-[#000029] bg-[#000029] px-3 py-2 rounded text-gray-500"
+                                                className="w-full border dark:border-white border-[#000029] bg-[#000029] px-3 py-2 rounded text-gray-500"
                                                 readOnly
                                           />
                                     </div>
                                     <div>
-                                          <label className="font-semibold mb-2 block text-[#000029]">Email</label>
+                                          <label className="font-semibold mb-2 block dark:text-white  text-[#000029]">Email</label>
                                           <input
                                                 type="text"
                                                 value={user?.email || "No Email"}
-                                                className="w-full border border-[#000029] bg-[#000029] px-3 py-2 rounded text-gray-500"
+                                                className="w-full border dark:border-white border-[#000029] bg-[#000029] px-3 py-2 rounded text-gray-500"
                                                 readOnly
                                           />
                                     </div>

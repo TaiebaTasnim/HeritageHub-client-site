@@ -2,8 +2,8 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#000029] text-white pt-12 pb-6 px-6">
-      <div className="container mx-auto w-[90%]">
+    <footer className="bg-[#000029] text-white pt-12 pb-6 ">
+      <div className="container mx-auto w-[90%] ">
         {/* Footer Content Sections */}
         <div className="grid md:grid-cols-3 gap-12 mb-12 relative">
           {/* About Us Section */}
@@ -18,9 +18,7 @@ const Footer = () => {
             <p className="text-gray-300 mb-6">
               HeritageHub is your trusted partner for exploring and preserving historical artifacts.
             </p>
-            <a href="/about" className="text-[#00FFFF] font-semibold hover:underline">
-              Learn More
-            </a>
+            
           </div>
 
           {/* Contact Us Section */}
@@ -58,7 +56,7 @@ const Footer = () => {
           {/* Newsletter Section */}
           <div className="bg-[#000029] text-center md:text-start  rounded-lg shadow-xl flex flex-col items-center justify-center">
             <h3 className="text-[#00FFFF] text-xl sm:text-3xl font-semibold mb-2">Subscribe to Our Newsletter</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-4">
+            <p className="text-gray-300 text-sm sm:text-base mb-4">
               Stay updated with the latest discoveries and news from HeritageHub.
             </p>
             <form className="space-y-2 ">

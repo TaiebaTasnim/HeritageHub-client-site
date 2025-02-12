@@ -71,11 +71,11 @@ const MyArtifacts = () => {
 
       }
       return (
-            <div>
+            <div className="container mx-auto w-[90%] bg-white dark:bg-black">
                   <Helmet>
                         <title>My Artifacts</title>
                   </Helmet>
-                  <div className="bg-white min-h-screen text-[#000029] p-6">
+                  <div className=" min-h-screen text-[#000029] p-6">
     {/* Page Title */}
     <h2 className="text-3xl font-bold text-center mb-8 text-[#000029]">
       My Artifacts

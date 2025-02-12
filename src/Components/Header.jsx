@@ -160,7 +160,7 @@ const handlesignout = () => {
       return (
        
          <div className="bg-[#000029] text-white shadow-md fixed top-0 left-0 w-full z-50 ">
-        <div className="container mx-auto md:w-[90%] navbar px-4 py-3 ">
+        <div className="container mx-auto md:w-[90%] navbar  py-3 ">
           {/* Navbar Start */}
           <div className="navbar-start">
             <div className="dropdown">
@@ -271,6 +271,14 @@ const handlesignout = () => {
                     </button>
                   </div>
                 </ReactTooltip>
+                <button className="hidden md:block text-2xl" onClick={darkModehandler}>
+                  {
+                    dark && <IoSunny></IoSunny>
+                  }
+                   {
+                    !dark && <IoMoon></IoMoon>
+                  }
+                </button>
                 
               </div>
             ) : (

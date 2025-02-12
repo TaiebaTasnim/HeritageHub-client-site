@@ -84,7 +84,7 @@ const Login = () => {
       return (
        
             <div
-            className="min-h-screen bg-cover bg-center container mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center relative my-10"
+            className="min-h-screen bg-cover bg-center container mx-auto w-[90%] flex flex-col lg:flex-row items-center justify-center relative mt-12 border-2 "
             // style={{
             //   backgroundImage: "url('https://i.ibb.co.com/bFGz7FV/visa-9.jpg')", // Replace with your image URL
             // }}
@@ -96,15 +96,15 @@ const Login = () => {
         
             {/* Animated Form */}
             <div
-               className=" w-[90%] max-w-md px-8 py-10 mt-0 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029] " 
+               className=" w-[90%] max-w-md px-8 py-10  rounded-lg shadow-xl bg-white dark:bg-white dark:bg-opacity-0 bg-opacity-15 dark:backdrop-blur-0 backdrop-blur-md border border-[#000029] dark:border-white mt-0" 
               >
-                <h1 className="text-3xl font-bold text-center text-[#000029] mb-6">
+                <h1 className="text-3xl font-bold text-center text-[#000029] dark:text-white mb-6">
                   Login
                 </h1>
                 <form onSubmit={handlelogin}>
                   <div className="form-control mb-4" >
                     <label className="label">
-                      <span className="text-[#000029] font-semibold">Email</span>
+                      <span className="text-[#000029] dark:text-white font-semibold">Email</span>
                     </label>
                     <input
                       type="email"
@@ -116,19 +116,19 @@ const Login = () => {
                   </div>
                   <div className="form-control mb-6 relative">
                     <label className="label">
-                      <span className="text-[#000029] font-semibold">Password</span>
+                      <span className="text-[#000029] dark:text-white font-semibold">Password</span>
                     </label>
                     <input
                       type={show ? "text" : "password"}
                       placeholder="Enter your password"
                       name="password"
-                      className="input input-bordered w-full bg-white bg-opacity-30 text-black"
+                      className="input input-bordered w-full dark:text-white bg-white bg-opacity-30 text-black"
                       required
                     />
                     <button
                       type="button"
                       onClick={() => setShow(!show)}
-                      className="absolute text-[#000029] right-3 top-[55px]"
+                      className="absolute text-[#000029] dark:text-white right-3 top-[55px]"
                     >
                       {show ? <FaEye /> : <FaEyeSlash />}
                     </button>
@@ -150,16 +150,16 @@ const Login = () => {
                   {errorMsg && (
                     <h1 className="text-[16px] text-red-700 text-center">{errorMsg}</h1>
                   )}
-                  <p className="text-center text-black">
+                  <p className="text-center text-black dark:text-white">
                     New to this site?{" "}
-                    <span className="font-bold text-[#000029]">
+                    <span className="font-bold text-[#000029] dark:text-white">
                       <Link to="/register">Register</Link>
                     </span>
                   </p>
                 </form>
-                <div className="divider mt-0 text-[#000029]">OR</div>
-                <div onClick={handleSignup}  className="flex justify-center items-center py-3 rounded-lg px-4 border-[#000029] border-2 text-[#000029] font-bold  gap-3 mb-4 mx-3">
-                <FaGoogle className="text-[#000029]"></FaGoogle>
+                <div className="divider mt-0 text-[#000029] dark:text-white">OR</div>
+                <div onClick={handleSignup}  className="flex justify-center items-center py-3 rounded-lg px-4 border-[#000029] dark:border-white dark:text-white border-2 text-[#000029] font-bold  gap-3 mb-4 mx-3">
+                <FaGoogle className="text-[#000029] dark:text-white"></FaGoogle>
                 <button className=""> Login with Google</button>
         
                 </div>

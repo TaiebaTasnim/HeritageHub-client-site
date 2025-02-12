@@ -37,14 +37,14 @@ const LikedArtifact = () => {
             return  <div className="flex justify-center items-center min-h-screen text-[#000029]"><Lottie animationData={loadingSpinner}></Lottie></div>
         }
       return (
-            <div>
+            <div className="container mx-auto w-[90%] bg-white dark:bg-black">
   {/* Helmet for dynamic title */}
   <Helmet>
     <title>My Liked Artifacts</title>
   </Helmet>
 
   {/* Page Container */}
-  <div className="bg-white min-h-screen text-[#000029] p-6">
+  <div className=" min-h-screen text-[#000029] p-6">
     {/* Page Title */}
     <h2 className="text-3xl font-bold text-center mb-8 text-[#000029]">
       My Liked Artifacts

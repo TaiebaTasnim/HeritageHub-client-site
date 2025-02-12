@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet-async";
 import Lottie from "lottie-react";
 import register from "../assets/Lottie/register.json"
 import Swal from "sweetalert2";
+import { div } from "framer-motion/client";
 
 
 const Register = () => {
@@ -93,8 +94,9 @@ const Register = () => {
             })
             }
       return (
-            <div
-      className="container my-10 mx-auto w-[90%] min-h-screen bg-cover bg-center flex flex-col lg:flex-row items-center justify-center gap-4 relative"
+           <div className="dark:bg-black">
+             <div
+      className="container mt-10 py-6 mx-auto w-[90%] min-h-screen bg-cover bg-center flex flex-col lg:flex-row items-center justify-center gap-4 relative "
       // style={{
       //   backgroundImage: "url('https://i.ibb.co.com/bFGz7FV/visa-9.jpg')", 
       // }}
@@ -107,11 +109,11 @@ const Register = () => {
       
       
       <div
-        className="md:w-[50%]  px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029]"
+        className="md:w-[50%]  px-8 py-10 rounded-lg shadow-xl bg-white bg-opacity-15 backdrop-blur-md border border-[#000029] dark:border-white dark:bg-black"
       //   data-aos="fade-up"
       >
         <h1
-          className="text-3xl font-bold text-center text-[#000029] mb-6"
+          className="text-3xl font-bold text-center text-[#000029] dark:text-white mb-6"
       //     data-aos="fade-down"
         >
           Register
@@ -119,55 +121,55 @@ const Register = () => {
         <form onSubmit={handleregister}>
           <div className="form-control mb-4" >
             <label className="label">
-              <span className="text-[#000029] font-semibold">Name</span>
+              <span className="text-[#000029] dark:text-white font-semibold">Name</span>
             </label>
             <input
               type="text"
               placeholder="Your Name"
-              className="input input-bordered w-full bg-white bg-opacity-30 text-black"
+              className="input input-bordered w-full bg-white dark:text-white bg-opacity-30 text-black"
               name="name"
               required
             />
           </div>
           <div className="form-control mb-4" >
             <label className="label">
-              <span className="text-[#000029] font-semibold">Email</span>
+              <span className="text-[#000029] dark:text-white font-semibold">Email</span>
             </label>
             <input
               type="email"
               placeholder="Enter your email"
-              className="input input-bordered w-full bg-white bg-opacity-30 text-black"
+              className="input input-bordered w-full bg-white dark:text-white bg-opacity-30 text-black"
               name="email"
               required
             />
           </div>
           <div className="form-control mb-4" >
             <label className="label">
-              <span className="text-[#000029] font-semibold">Photo URL</span>
+              <span className="text-[#000029] dark:text-white font-semibold">Photo URL</span>
             </label>
             <input
               type="text"
               placeholder="Photo URL"
-              className="input input-bordered w-full bg-white bg-opacity-30 text-black"
+              className="input input-bordered w-full bg-white dark:text-white bg-opacity-30 text-black"
               name="photo"
               required
             />
           </div>
           <div className="form-control mb-6 relative" >
             <label className="label">
-              <span className="text-[#000029] font-semibold">Password</span>
+              <span className="text-[#000029] dark:text-white font-semibold">Password</span>
             </label>
             <input
               type={show ? "text" : "password"}
               placeholder="Enter your password"
               name="password"
-              className="input input-bordered w-full bg-white bg-opacity-30 text-black"
+              className="input input-bordered w-full bg-white dark:text-white bg-opacity-30 text-black"
               required
             />
             <button
               type="button"
               onClick={() => setShow(!show)}
-              className="absolute text-[#000029] right-3 top-[55px]"
+              className="absolute text-[#000029] dark:text-white right-3 top-[55px]"
             >
               {show ? <FaEye /> : <FaEyeSlash />}
             </button>
@@ -196,17 +198,17 @@ const Register = () => {
               {errorMsg}
             </h1>
           )}
-          <p className="text-center text-black">
+          <p className="text-center text-black dark:text-white">
             Already have an account?{" "}
-            <span className="font-bold text-[#000029]">
+            <span className="font-bold text-[#000029] dark:text-white">
               <Link to="/login">Log in</Link>
             </span>
           </p>
         </form>
         
-         <div className="divider mt-0 text-[#000029]">OR</div>
-        <div onClick={handleSignup}  className="flex justify-center items-center py-3 rounded-lg px-4 border-[#000029] border-2 text-[#000029] font-bold  gap-3 mb-4 mx-3">
-        <FaGoogle className="text-[#000029]"></FaGoogle>
+         <div className="divider mt-0 text-[#000029] dark:text-white">OR</div>
+        <div onClick={handleSignup}  className="flex justify-center items-center py-3 rounded-lg px-4 border-[#000029] dark:border-white border-2 dark:text-white text-[#000029] font-bold  gap-3 mb-4 mx-3">
+        <FaGoogle className="text-[#000029] dark:text-white"></FaGoogle>
         <button className=""> Register with Google</button>
 
         </div> 
@@ -215,6 +217,7 @@ const Register = () => {
         <Lottie animationData={register} ></Lottie>
       </div>
     </div>
+           </div>
       );
 };
 

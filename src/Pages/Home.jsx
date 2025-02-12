@@ -8,7 +8,7 @@ import Team from "../Components/Team";
 
 const Home = () => {
       return (
-            <div>
+            <div >
                   <Helmet>
                         <title>HeritageHub | Home</title>
                   </Helmet>

@@ -128,7 +128,7 @@ const ArtifactDetails = () => {
       //       }
       //   };
       return (
-            <div>
+            <div className='container mx-auto w-[90%] bg-white dark:bg-black  border-t-2 '>
             {/* Helmet for dynamic title */}
             {artifact?.artifacts && (
               <Helmet>
@@ -137,17 +137,17 @@ const ArtifactDetails = () => {
             )}
       
             {/* Page Container */}
-            <div className="bg-white min-h-screen text-white p-6">
-              <div className="text-center mb-10">
+            <div className=" min-h-screen text-white">
+              <div className="text-center mt-20 py-6 ">
                 <h1
-                  className="text-5xl font-bold text-[#000029] animate__animated animate__bounceIn"
+                  className="text-3xl font-bold dark:text-white text-[#000029] animate__animated animate__bounceIn"
                   data-aos="fade-down"
                   data-aos-duration="1000"
                 >
                   Artifact Details
                 </h1>
                 <p
-                  className="text-lg text-gray-800 mt-2"
+                  className="text-lg text-gray-800 dark:text-gray-400 mt-2"
                   data-aos="fade-up"
                   data-aos-duration="1200"
                 >
@@ -157,7 +157,7 @@ const ArtifactDetails = () => {
       
               {/* Artifact Details Section */}
               <div
-                className="max-w-4xl mx-auto space-y-6"
+                className=" space-y-6"
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
@@ -172,7 +172,7 @@ const ArtifactDetails = () => {
       
                 {/* Artifact Name */}
                 <h2
-                  className="text-5xl font-bold text-center text-[#000029] mb-6 animate__animated animate__fadeInDown"
+                  className="text-5xl font-bold text-center dark:text-white text-[#000029] mb-6 animate__animated animate__fadeInDown"
                   data-aos="fade-down"
                 >
                   {artifact?.artifacts?.artifactName}
@@ -184,48 +184,48 @@ const ArtifactDetails = () => {
                     {/* Historical Context */}
                     <div className="sm:col-span-2">
                     
-                    <p className="text-lg text-gray-800 mt-2 text-center">{artifact?.artifacts?.historicalContext}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400 mt-2 text-center">{artifact?.artifacts?.historicalContext}</p>
                   </div>
                   {/* Artifact Type */}
                   <div className="flex items-center gap-4">
-                    <span className="text-[#000029]  text-xl font-semibold">
+                    <span className="text-[#000029] dark:text-white text-xl font-semibold">
                       Artifact Type:
                     </span>
-                    <p className="text-lg text-gray-800 ">{artifact?.artifacts?.artifactType}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400 ">{artifact?.artifacts?.artifactType}</p>
                   </div>
       
                 
       
                   {/* Created At */}
                   <div className="flex items-center gap-4">
-                    <span className="text-[#000029]  text-xl font-semibold">
+                    <span className="text-[#000029] dark:text-white  text-xl font-semibold">
                       Created At:
                     </span>
-                    <p className="text-lg text-gray-800 ">{artifact?.artifacts?.createdAt}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400">{artifact?.artifacts?.createdAt}</p>
                   </div>
       
                   {/* Discovered At */}
                   <div className="flex items-center gap-4">
-                    <span className="text-[#000029] text-xl font-semibold">
+                    <span className="text-[#000029] dark:text-white text-xl font-semibold">
                       Discovered At:
                     </span>
-                    <p className="text-lg text-gray-800 ">{artifact?.artifacts?.discoveredAt}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400">{artifact?.artifacts?.discoveredAt}</p>
                   </div>
       
                   {/* Discovered By */}
                   <div className="flex items-center gap-4">
-                    <span className="text-[#000029] text-xl font-semibold">
+                    <span className="text-[#000029] dark:text-white text-xl font-semibold">
                       Discovered By:
                     </span>
-                    <p className="text-lg text-gray-800 ">{artifact?.artifacts?.discoveredBy}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400">{artifact?.artifacts?.discoveredBy}</p>
                   </div>
       
                   {/* Present Location */}
                   <div className="sm:col-span-2 flex items-center gap-4">
-                    <span className="text-[#000029] text-xl font-semibold">
+                    <span className="text-[#000029] dark:text-white text-xl font-semibold">
                       Present Location:
                     </span>
-                    <p className="text-lg text-gray-800  mt-2">{artifact?.artifacts?.presentLocation}</p>
+                    <p className="text-lg text-gray-800 dark:text-gray-400  mt-2">{artifact?.artifacts?.presentLocation}</p>
                   </div>
                 </div>
       
@@ -233,7 +233,7 @@ const ArtifactDetails = () => {
                 <div className="mt-6 flex items-center justify-center gap-6">
   <button
     onClick={handleLike}
-    className={`py-3 px-6 rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center ${
+    className={`py-3 px-6 mb-6 rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center ${
       artifact?.likedBy?.includes(userEmail)
         ? "bg-[#00FFFF] text-[#000029]" 
         : "bg-[#000029] text-white" 
@@ -243,7 +243,7 @@ const ArtifactDetails = () => {
       {artifact?.likedBy?.includes(userEmail) ? "Unlike" : "Like"}
     
   </button>
-  <span className="text-lg font-semibold text-gray-800">
+  <span className="text-lg mb-6 font-semibold text-gray-800 dark:text-gray-400">
     Likes: {artifact?.likeCount}
   </span>
 </div>

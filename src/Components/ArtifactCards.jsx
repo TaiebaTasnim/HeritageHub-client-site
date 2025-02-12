@@ -8,9 +8,9 @@ const ArtifactCards = () => {
       const [artifacts, setArtifacts] = useState(loadedartifact)
 
       return (
-            <div className=" py-12 container mx-auto w-[90%]">
-            <div className="container mx-auto">
-                  <h2 className="text-4xl text-[#000029] font-bold text-center mb-8" data-aos="fade-up">
+            <div className=" py-12 container mx-auto w-[90%] border-2">
+            <div className="">
+                  <h2 className="text-4xl text-[#000029] dark:text-white font-bold text-center mb-8" data-aos="fade-up">
                         Our highest Like Artifacts
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">

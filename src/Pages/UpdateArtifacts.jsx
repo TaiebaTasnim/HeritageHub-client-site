@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import Lottie from "lottie-react";
+import loadingSpinner from '../assets/Lottie/loading.json'
 
 
 
@@ -70,7 +72,7 @@ const UpdateArtifacts = () => {
       }, [id]);
 
       if (loading) {
-            return  <div className="flex min-h-screen justify-center items-center"><span className="loading loading-bars loading-lg text-[#e20934]"></span></div>
+            return  <div className="flex justify-center items-center min-h-screen text-[#000029]"><Lottie animationData={loadingSpinner}></Lottie></div>
         }
   
       const handleChange = (e) => {
@@ -121,7 +123,7 @@ const UpdateArtifacts = () => {
               });
             }
       return (
-            <div>
+            <div className="bg-white dark:bg-black pb-4">
                   {/* <Helmet>
                         <title>Update Artifact:{artifact?.artifactName}</title>
                   </Helmet> */}
@@ -131,45 +133,45 @@ const UpdateArtifacts = () => {
               </Helmet>
             )}
 
-<div className="container w-[90%] my-10 mx-auto border-2 border-[#000029] bg-white text-black p-8 shadow-lg rounded-md">
-  <h2 className="text-3xl font-bold mb-6 text-center text-[#000029]">
+<div className="container w-[90%] py-10 mt-12 mx-auto border-2 dark:border-white border-[#000029] bg-white dark:bg-black text-black p-8 shadow-lg rounded-md">
+  <h2 className="text-3xl font-bold mb-6 text-center text-[#000029] dark:text-white">
     Update Artifact
   </h2>
   <form onSubmit={handleSubmit} className="space-y-6">
     {/* Artifact Name */}
     <div>
-      <label className="font-semibold mb-2 block text-[#000029]">Artifact Name</label>
+      <label className="font-semibold mb-2 block text-[#000029] dark:text-white">Artifact Name</label>
       <input
         type="text"
         name="artifactName"
         value={formData.artifactName}
         onChange={handleChange}
-        className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+        className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
         required
       />
     </div>
 
     {/* Artifact Image */}
     <div>
-      <label className="font-semibold mb-2 block text-[#000029]">Artifact Image URL</label>
+      <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Artifact Image URL</label>
       <input
         type="text"
         name="artifactImage"
         value={formData.artifactImage}
         onChange={handleChange}
-        className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+        className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
         required
       />
     </div>
 
     {/* Artifact Type */}
     <div>
-      <label className="font-semibold mb-2 block text-[#000029]">Artifact Type</label>
+      <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Artifact Type</label>
       <select
         name="artifactType"
         value={formData.artifactType}
         onChange={handleChange}
-        className="w-full border border-[#000029] bg-[#000029] px-3 py-2 rounded text-white"
+        className="w-full border border-[#000029] dark:border-white dark:text-white bg-[#000029] px-3 py-2 rounded text-white"
       >
         <option disabled value="">
           Pick an Artifact type
@@ -184,12 +186,12 @@ const UpdateArtifacts = () => {
 
     {/* Historical Context */}
     <div>
-      <label className="font-semibold mb-2 block text-[#000029]">Historical Context</label>
+      <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Historical Context</label>
       <textarea
         name="historicalContext"
         value={formData.historicalContext}
         onChange={handleChange}
-        className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+        className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
         rows="4"
         required
       ></textarea>
@@ -199,26 +201,26 @@ const UpdateArtifacts = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Created At */}
       <div>
-        <label className="font-semibold mb-2 block text-[#000029]">Created At</label>
+        <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Created At</label>
         <input
           type="text"
           name="createdAt"
           value={formData.createdAt}
           onChange={handleChange}
-          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+          className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
           required
         />
       </div>
 
       {/* Discovered At */}
       <div>
-        <label className="font-semibold mb-2 block text-[#000029]">Discovered At</label>
+        <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Discovered At</label>
         <input
           type="text"
           name="discoveredAt"
           value={formData.discoveredAt}
           onChange={handleChange}
-          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+          className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
           required
         />
       </div>
@@ -228,26 +230,26 @@ const UpdateArtifacts = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Discovered By */}
       <div>
-        <label className="font-semibold mb-2 block text-[#000029]">Discovered By</label>
+        <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Discovered By</label>
         <input
           type="text"
           name="discoveredBy"
           value={formData.discoveredBy}
           onChange={handleChange}
-          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+          className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
           required
         />
       </div>
 
       {/* Present Location */}
       <div>
-        <label className="font-semibold mb-2 block text-[#000029]">Present Location</label>
+        <label className="font-semibold mb-2 block dark:text-white text-[#000029]">Present Location</label>
         <input
           type="text"
           name="presentLocation"
           value={formData.presentLocation}
           onChange={handleChange}
-          className="w-full border border-[#000029] bg-transparent px-3 py-2 rounded text-black"
+          className="w-full border border-[#000029] dark:border-white dark:text-white bg-transparent px-3 py-2 rounded text-black"
           required
         />
       </div>

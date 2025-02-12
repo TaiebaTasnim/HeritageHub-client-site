@@ -45,7 +45,7 @@ const Banner = () => {
                 className="w-full min-h-screen  md:h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center  px-6 md:px-16 lg:px-24">
-                <div className="text-white max-w-lg animate__animated animate__fadeInRight">
+                <div className="text-white max-w-xl animate__animated animate__fadeInRight">
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
                     {slide.title}
                   </h2>

@@ -45,9 +45,9 @@ const Team = () => {
 
   return (
     <div>
-      <section className="bg-white text-[#000029] py-10 px-6 md:px-20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#000029] mb-12" data-aos="fade-up">
+      <section className="bg-white   dark:bg-black text-[#000029] py-12  ">
+        <div className="container w-[90%] border-2 mx-auto text-center">
+          <h2 className="text-4xl font-bold text-[#000029] mb-12 dark:text-white" data-aos="fade-up">
             Meet Our Team
           </h2>
           <Swiper

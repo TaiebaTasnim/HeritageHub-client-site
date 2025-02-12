@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 const AboutUs = () => {
   return (
-      <div className="py-10 px-6">
-      <div className="container mx-auto w-[90%]">
+      <div className="py-12 ">
+      <div className="container mx-auto w-[90%] border-2">
         {/* Header */}
         <div className="text-center mb-12">
           <h1
@@ -13,7 +14,7 @@ const AboutUs = () => {
             About Us
           </h1>
           <p
-            className="text-gray-500 dark:text-gray-200 text-lg mt-4 max-w-2xl mx-auto"
+            className="text-gray-500 dark:text-gray-400 text-lg mt-4 max-w-2xl mx-auto"
             data-aos="fade-up"
           >
             <strong>
@@ -47,7 +48,7 @@ const AboutUs = () => {
           </div> */}
           {/* Image Section */}
           <div
-            className="p-4 border-[#000029] border-2 rounded-lg"
+            className="p-4 border-[#000029] dark:border-white border-2 rounded-lg"
             data-aos="fade-right"
           >
             <div className="h-full">
@@ -59,11 +60,12 @@ const AboutUs = () => {
             </div>
           </div>
           {/* Content Section */}
-             <div className="flex flex-col justify-center border-r-2  border-[#000029] pr-8" data-aos="fade-right">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#000029] mb-6">
+            
+             <div className="flex flex-col justify-center border-r-2 dark:border-white  border-[#000029] pr-8" data-aos="fade-right">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#000029] dark:text-white mb-6">
               Preserving History, Inspiring Future
             </h2>
-            <ul className="text-gray-500 text-lg leading-relaxed mb-6 space-y-4">
+            <ul className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-6 space-y-4">
               <li className="list-disc ">
                 <strong> Commitment to Preservation:</strong> Safeguarding the cultural and historical richness of civilizations worldwide.
               </li>
@@ -77,12 +79,14 @@ const AboutUs = () => {
                 <strong> A Gateway to Knowledge:</strong> Experience the wonders of timeless treasures through our well-curated platform.
               </li>
             </ul>
-            <button className="flex justify-center items-center gap-2 py-3 px-6 bg-[#000029] text-white rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center">
+           <Link to='/allArtifact' className="flex justify-center items-center gap-2 py-3 px-6 bg-[#000029] text-white rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center">
+           <button >
               <span className="absolute inset-0 bg-gradient-to-r from-[#00FFFF] to-black opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative group-hover:text-white transition duration-500 ease-in-out text-center">
-                Learn More
+               Learn More
               </span>
             </button>
+           </Link>
           </div>
 
          
