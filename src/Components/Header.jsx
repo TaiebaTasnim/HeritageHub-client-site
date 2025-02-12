@@ -17,7 +17,7 @@ const Header = () => {
      
       const links = (
         <>
-        <button className="pl-6"  onClick={darkModehandler}>
+        <button className="pl-6 md:hidden"  onClick={darkModehandler}>
                   {
                     dark && <IoSunny></IoSunny>
                   }
@@ -157,7 +157,8 @@ const handlesignout = () => {
         .catch(error => error.message)
     }
       return (
-        <div className="bg-[#000029] text-white shadow-md sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
+       
+         <div className="bg-[#000029] text-white shadow-md fixed top-0 left-0 w-full z-50 ">
         <div className="container mx-auto md:w-[90%] navbar px-4 py-3 ">
           {/* Navbar Start */}
           <div className="navbar-start">
@@ -300,6 +301,8 @@ const handlesignout = () => {
           </div>
         </div>
       </div>
+       
+
 //             <div>
 //                   <div className="navbar container mx-auto w-[90%] ">
 //   <div className="navbar-start">

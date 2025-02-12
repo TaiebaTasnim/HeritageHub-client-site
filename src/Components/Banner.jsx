@@ -42,9 +42,9 @@ const Banner = () => {
               <img
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[500px] md:h-[562px] object-cover"
+                className="w-full min-h-screen  md:h-[600px] object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center px-6 md:px-16 lg:px-24">
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center  px-6 md:px-16 lg:px-24">
                 <div className="text-white max-w-lg animate__animated animate__fadeInRight">
                   <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
                     {slide.title}
