@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
       <div className="py-12 ">
-      <div className="container mx-auto w-[90%] border-2">
+      <div className="container mx-auto w-[90%] ">
         {/* Header */}
         <div className="text-center mb-12">
           <h1

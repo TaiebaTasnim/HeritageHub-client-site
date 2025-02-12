@@ -10,6 +10,17 @@ const AllArtifacts = () => {
   const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
+  const [selectedArtifactType, setSelectedArtifactType] = useState("");
+
+  // Filter visas based on the selected type
+  const filteredartifact = selectedArtifactType
+    ? allArtifact.filter((artifact) => artifact?.artifacts?.artifactType === selectedArtifactType)
+    : allArtifact;
+
+  const handleArtifactTypeChange = (event) => {
+    const artifactType = event.target.value;
+    setSelectedArtifactType(artifactType);
+  };
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -48,6 +59,23 @@ const AllArtifacts = () => {
               Search
             </span>
           </button>
+        </div>
+        <div className="mb-6 text-center">
+          <label htmlFor="artifactType" className="text-[#e20934] text-xl font-bold mr-2">
+            Select Artifact Type:
+          </label>
+          <select
+            id="visaType"
+            className="p-2 rounded-lg text-black"
+            value={selectedArtifactType}
+            onChange={handleArtifactTypeChange}
+          >
+             <option value="">All Artifact</option>
+            <option value="Tool">Tool</option>
+            <option value="Weapons">Weapons</option>
+            <option value="Documents">Official Visa</option>
+            <option value="Writings">Official Visa</option>
+          </select>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">

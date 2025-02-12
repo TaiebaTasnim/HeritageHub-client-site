@@ -17,9 +17,9 @@ const ErrorPage = () => {
                         <Lottie animationData={errorlottie} className='h-96'></Lottie>
 
                   </div>
-                  <h1 className='text-4xl text-black'>Ooops!!!</h1>
-                  <p className='text-black'>Sorry, an unexpected error has occurred.</p>
-                 <p className='text-black'>
+                  <h1 className='text-4xl text-black dark:text-white'>Ooops!!!</h1>
+                  <p className='text-black dark:text-white'>Sorry, an unexpected error has occurred.</p>
+                 <p className='text-black dark:text-white'>
                     <i>{error.statusText || error.message} </i>
                 </p>
                 <button onClick={()=>navigate('/')} className="py-3 px-6 bg-[#000029] text-white rounded-lg font-semibold transition duration-500 ease-in-out relative overflow-hidden group text-center">
