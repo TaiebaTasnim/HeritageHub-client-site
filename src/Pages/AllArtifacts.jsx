@@ -61,26 +61,26 @@ const AllArtifacts = () => {
           </button>
         </div>
         <div className="mb-6 text-center">
-          <label htmlFor="artifactType" className="text-[#e20934] text-xl font-bold mr-2">
+          <label htmlFor="artifactType" className="text-[#000029] dark:text-white text-xl font-bold mr-2">
             Select Artifact Type:
           </label>
           <select
             id="visaType"
-            className="p-2 rounded-lg text-black"
+            className="p-2 rounded-lg text-black border-[#000029] border-2"
             value={selectedArtifactType}
             onChange={handleArtifactTypeChange}
           >
              <option value="">All Artifact</option>
             <option value="Tool">Tool</option>
             <option value="Weapons">Weapons</option>
-            <option value="Documents">Official Visa</option>
-            <option value="Writings">Official Visa</option>
+            <option value="Documents">Document</option>
+            <option value="Writings">Writings</option>
           </select>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {allArtifact.length > 0 ? (
-            allArtifact.map((artifact) => (
+          {filteredartifact.length > 0 ? (
+            filteredartifact.map((artifact) => (
               <div
                 key={artifact._id}
                 className="relative bg-[#000029] p-6 rounded-lg shadow-lg overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-white border-2 hover:border-[#000029] flex flex-col h-full"
@@ -129,7 +129,7 @@ const AllArtifacts = () => {
             ))
           ) : (
             <div className="col-span-full">
-              <p className="text-center text-[#000029] text-2xl mt-10">No artifacts found for your search.</p>
+              <p className="text-center text-[#000029] dark:text-white text-2xl mt-10">No artifacts found for your search.</p>
             </div>
           )}
         </div>
