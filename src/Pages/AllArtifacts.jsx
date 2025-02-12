@@ -92,7 +92,7 @@ const AllArtifacts = () => {
                   <img
                     src={artifact?.artifacts?.artifactImage}
                     alt={artifact?.artifacts?.artifactName}
-                    className="w-full h-full object-cover rounded-lg border-2 border-white transition-all duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover rounded-lg border-2 border-white transition-all duration-400 group-hover:scale-110"
                   />
                 </div>
 
