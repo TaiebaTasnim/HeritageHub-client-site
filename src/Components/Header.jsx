@@ -3,14 +3,28 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { IoMoon, IoSunny } from "react-icons/io5";
 
 
 
 const Header = () => {
       const { user, signout } = useContext(AuthContext)
+      const [dark,setDark]=useState(false)
+      const darkModehandler=()=>{
+        setDark(!dark)
+        document.body.classList.toggle('dark')
+      }
      
       const links = (
         <>
+        <button className="pl-6"  onClick={darkModehandler}>
+                  {
+                    dark && <IoSunny></IoSunny>
+                  }
+                   {
+                    !dark && <IoMoon></IoMoon>
+                  }
+                </button>
           <li>
             <NavLink
               to="/"
@@ -71,6 +85,7 @@ const Header = () => {
               Add Artifacts
             </NavLink>
           </li>
+          
         </>
       );
       
@@ -142,8 +157,8 @@ const handlesignout = () => {
         .catch(error => error.message)
     }
       return (
-        <div className="bg-[#000029] text-white shadow-md">
-        <div className="container mx-auto md:w-[90%] navbar px-4 py-3">
+        <div className="bg-[#000029] text-white shadow-md sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
+        <div className="container mx-auto md:w-[90%] navbar px-4 py-3 ">
           {/* Navbar Start */}
           <div className="navbar-start">
             <div className="dropdown">
@@ -165,7 +180,7 @@ const handlesignout = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-[#000029] rounded-box z-[1] mt-3 w-48 p-2  shadow"
+                className="menu menu-sm dropdown-content bg-[#000029] rounded-box z-[1] mt-3 w-48 p-2 space-y-4  shadow"
               >
                 {links}
               </ul>
@@ -272,6 +287,14 @@ const handlesignout = () => {
                     Register
                   </span>
                 </Link>
+                <button className="hidden md:block" onClick={darkModehandler}>
+                  {
+                    dark && <IoSunny></IoSunny>
+                  }
+                   {
+                    !dark && <IoMoon></IoMoon>
+                  }
+                </button>
               </div>
             )}
           </div>

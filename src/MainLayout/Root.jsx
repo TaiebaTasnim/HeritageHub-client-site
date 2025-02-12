@@ -18,7 +18,7 @@ const Root = () => {
 
                   </div>
                  
-                  <div className="min-h-[calc(100vh-246px)]">
+                  <div className="min-h-[calc(100vh-246px)] dark:bg-black">
                   <Outlet></Outlet>
 
                   </div>

@@ -7,13 +7,13 @@ const AboutUs = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1
-            className="text-4xl md:text-5xl font-bold text-[#000029]"
+            className="text-4xl md:text-5xl font-bold text-[#000029] dark:text-white"
             data-aos="fade-down"
           >
             About Us
           </h1>
           <p
-            className="text-gray-500 text-lg mt-4 max-w-2xl mx-auto"
+            className="text-gray-500 dark:text-gray-200 text-lg mt-4 max-w-2xl mx-auto"
             data-aos="fade-up"
           >
             <strong>

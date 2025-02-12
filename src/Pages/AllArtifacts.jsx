@@ -34,8 +34,8 @@ const AllArtifacts = () => {
       <Helmet>
         <title>All Artifacts</title>
       </Helmet>
-      <div className="bg-white min-h-screen text-[#000029] p-6">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#000029]">
+      <div className="bg-white dark:bg-black  min-h-screen  p-6">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#000029] dark:text-white">
          All Artifacts
         </h2>
         <div className="flex justify-center mb-8">
